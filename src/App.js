@@ -1,26 +1,32 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
-const PageLink = ({ to, emoji, label }) => (
+const NavButton = ({ to, label }) => (
   <Link
     to={to}
-    className="bg-white shadow-md px-6 py-3 rounded-xl text-gray-800 font-semibold hover:bg-gray-100 transition"
+    className="bg-white shadow px-4 py-2 rounded-xl text-gray-800 font-semibold hover:bg-gray-100 transition"
   >
-    {emoji} {label}
+    {label}
   </Link>
+);
+
+const Navbar = () => (
+  <nav className="flex justify-between items-center p-4 bg-gray-100 shadow-md">
+    <h1 className="text-2xl font-bold text-gray-800">🐾 Paw Patrol</h1>
+    <div className="flex gap-3">
+      <NavButton to="/products" label="Products" />
+      <NavButton to="/orders" label="Orders" />
+      <NavButton to="/about" label="About Us" />
+      <NavButton to="/partners" label="Partners" />
+      <NavButton to="/login" label="Login" />
+    </div>
+  </nav>
 );
 
 const Home = () => (
   <div className="p-8 text-center">
-    <h1 className="text-4xl font-bold mb-6">Welcome to Paw Patrol</h1>
-    <p className="text-lg mb-10">Bringing pet joy to your doorstep</p>
-    <div className="flex flex-wrap justify-center gap-4">
-      <PageLink to="/products" emoji="🛍️" label="Products" />
-      <PageLink to="/orders" emoji="📦" label="Orders" />
-      <PageLink to="/about" emoji="👨‍💻" label="About Us" />
-      <PageLink to="/partners" emoji="🤝" label="Partners" />
-      <PageLink to="/login" emoji="🔐" label="Login" />
-    </div>
+    <h1 className="text-4xl font-bold mb-4">Welcome to Paw Patrol</h1>
+    <p className="text-lg text-gray-700">Bringing pet joy to your doorstep</p>
   </div>
 );
 
@@ -70,6 +76,7 @@ export default function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
@@ -81,4 +88,4 @@ export default function App() {
       </div>
     </Router>
   );
-  }
+}
