@@ -50,7 +50,7 @@ const Orders = () => (
 const AboutUs = () => (
   <div className="p-8">
     <h2 className="text-2xl font-bold mb-4">About Us</h2>
-    <p>We’re a team of pet lovers on a mission to deliver happiness.</p>
+    <p>Hello everyone. We, Kinshuk Tyagi and Mohd. Ayan, are the creators of this beautiful website for your beautiful pets!</p>
   </div>
 );
 
