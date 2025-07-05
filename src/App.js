@@ -26,7 +26,7 @@ const Navbar = () => (
 const Home = () => (
   <div className="p-8 text-center">
     <img
-      src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=1000&q=80"
+      src="https://images.unsplash.com/photo-1621518336680-4b8a3e76efba?auto=format&fit=crop&w=1000&q=80"
       alt="Cute dog and cat"
       className="mx-auto mb-6 rounded-xl shadow-md w-full max-w-2xl object-cover"
     />
