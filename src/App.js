@@ -30,7 +30,7 @@ const Products = () => (
     {[1, 2, 3].map((id) => (
       <Card key={id} className="rounded-2xl shadow-md">
         <CardContent className="p-4">
-          <img src={`https://placekitten.com/200/20${id}`} alt="Pet Product" className="w-full h-40 object-cover rounded-xl mb-4" />
+          <img src={`https://stock.adobe.com/search?k=cats+and+dogs+playing}`} alt="Pet Product" className="w-full h-40 object-cover rounded-xl mb-4" />
           <h2 className="text-xl font-semibold">Product {id}</h2>
           <p className="text-sm">A great item for your furry friend!</p>
           <Button className="mt-2">Add to Cart</Button>
