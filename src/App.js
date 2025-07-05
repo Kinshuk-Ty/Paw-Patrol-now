@@ -25,6 +25,11 @@ const Navbar = () => (
 
 const Home = () => (
   <div className="p-8 text-center">
+    <img
+      src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1000&q=80"
+      alt="Cute dog and cat"
+      className="mx-auto mb-6 rounded-xl shadow-md w-full max-w-2xl object-cover"
+    />
     <h1 className="text-4xl font-bold mb-4">Welcome to Paw Patrol</h1>
     <p className="text-lg text-gray-700">Bringing pet joy to your doorstep</p>
   </div>
