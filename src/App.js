@@ -1,3 +1,33 @@
+import React, { useState } from "react"; // make sure this is at the top of your file
+
+const Home = () => {
+  const [location, setLocation] = useState("");
+
+  return (
+    <div className="p-8 text-center">
+      <img
+        src="https://place-puppy.com/600x200"
+        alt="Cute dog and cat"
+        className="mx-auto mb-6 rounded-2xl shadow"
+      />
+      <input
+        type="text"
+        placeholder="Enter your location"
+        className="border p-2 rounded w-full max-w-sm mx-auto mb-4"
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
+      />
+      <p className="mb-4 text-gray-600">
+        {location ? `Delivering to: ${location}` : "We deliver across your city!"}
+      </p>
+      <h1 className="text-4xl font-bold mb-4">Welcome to Paw Patrol</h1>
+      <p className="text-lg mb-6">Bringing pet joy to your doorstep</p>
+      <button className="bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition">
+        <a href="/products">Shop Now</a>
+      </button>
+    </div>
+  );
+};
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
