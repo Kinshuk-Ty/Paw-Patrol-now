@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { auth } from './firebase';
-console.log("Firebase initialized:", auth);
 
 const Button = ({ children, ...props }) => (
   <button className="bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition" {...props}>
