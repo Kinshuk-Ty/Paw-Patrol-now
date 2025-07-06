@@ -122,3 +122,19 @@ body {
 .page-content {
   padding: 2rem;
 }
+
+/* DARK MODE STYLES */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark a {
+  color: #ffaaff;
+}
+
+body.dark nav {
+  background-color: #1e1e1e;
+}
+
+/* You can override more elements if needed */
