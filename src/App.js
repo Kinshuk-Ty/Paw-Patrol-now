@@ -231,39 +231,20 @@ const Navbar = () => (
 );
 
 export default function App() {
-  // Inside your App component's return statement:
-<Router>
-  <div className="min-h-screen bg-gray-50">
-    {/* ▼ Add this button ▼ */}
-    <button 
-      onClick={() => alert("Firebase auth object: " + typeof auth)}
-      className="fixed top-4 left-4 bg-red-500 text-white p-2 rounded-lg z-50"
-    >
-      TEST
-    </button>
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         <Routes>
-          {/* --- Main Content --- */}
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/orders" element={<Orders />} />
-          
-          {/* --- About Section --- */}
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/about/kinshuk" element={<KinshukProfile />} />
-          <Route path="/about/ayan" element={<AyanProfile />} />
-          <Route path="/about/pratik" element={<PratikProfile />} />
-          
-          {/* --- Other Pages --- */}
           <Route path="/partners" element={<Partners />} />
           <Route path="/location" element={<Location />} />
           <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
-  );
-        }
-        
+  );  // ← Ensure this closing parenthesis exists
+}      // ← Ensure this closing brace exists
