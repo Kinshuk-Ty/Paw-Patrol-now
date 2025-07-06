@@ -54,6 +54,71 @@ const AboutUs = () => (
   </div>
 );
 
+const ProfileCard = ({ name, role, bio, imageUrl, link }) => (
+  <Card className="text-center rounded-2xl shadow-md overflow-hidden">
+    <img 
+      src={imageUrl} 
+      alt={name} 
+      className="w-full h-48 object-cover"
+    />
+    <CardContent className="p-4">
+      <h3 className="text-xl font-bold">{name}</h3>
+      <p className="text-pink-500 mb-2">{role}</p>
+      <p className="text-sm mb-4 line-clamp-3">{bio}</p>
+      <Button>
+        <Link to={link}>Read More</Link>
+      </Button>
+    </CardContent>
+  </Card>
+);
+
+const AboutUs = () => (
+  <div className="p-8">
+    <h2 className="text-2xl font-bold mb-8 text-center">About Our Team</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <ProfileCard
+        name="Kinshuk Tyagi"
+        role="Founder & Developer"
+        bio="Passionate about pets and technology. Created Paw Patrol to combine both loves and make pet care accessible to everyone."
+        imageUrl="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        link="/about/kinshuk"
+      />
+      <ProfileCard
+        name="Mohd Ayan"
+        role="Co-Founder"
+        bio="Pet enthusiast with business expertise. Handles partnerships and ensures we deliver quality products to your doorstep."
+        imageUrl="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        link="/about/ayan"
+      />
+      <ProfileCard
+        name="Pratik Raj"
+        role="Marketing Head"
+        bio="Creative mind behind our branding and outreach. Makes sure Paw Patrol connects with pet lovers everywhere."
+        imageUrl="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        link="/about/pratik"
+      />
+    </div>
+  </div>
+);
+
+// Individual profile pages (add these components too)
+const KinshukProfile = () => (
+  <div className="p-8 max-w-2xl mx-auto">
+    <h2 className="text-3xl font-bold mb-4">Kinshuk Tyagi</h2>
+    <img 
+      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+      alt="Kinshuk" 
+      className="w-full h-64 object-cover rounded-xl mb-6"
+    />
+    <p className="mb-4">As the founder of Paw Patrol, I combined my love for pets with my technical skills...</p>
+    {/* Add more detailed content here */}
+    <Button className="mt-4">
+      <Link to="/about">Back to Team</Link>
+    </Button>
+  </div>
+);
+
+// Create similar components for AyanProfile and PratikProfile
 const Partners = () => (
   <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4">
     {["Happy Paws", "PetBuddy"].map((store) => (
