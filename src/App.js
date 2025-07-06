@@ -92,14 +92,49 @@ const Location = () => (
 const Navbar = () => (
   <nav className="bg-white shadow p-4 flex justify-between items-center">
     <h1 className="text-xl font-bold">🐾 Paw Patrol</h1>
-    <div className="space-x-4">
-      <Link to="/">Home</Link>
-      <Link to="/products">Products</Link>
-      <Link to="/orders">Orders</Link>
-      <Link to="/partners">Partners</Link>
-      <Link to="/about">About Us</Link>
-      <Link to="/location">Location</Link>
-      <Link to="/login">Login</Link>
+    <div className="space-x-2">
+      <Link 
+        to="/" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Home
+      </Link>
+      <Link 
+        to="/products" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Products
+      </Link>
+      <Link 
+        to="/orders" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Orders
+      </Link>
+      <Link 
+        to="/partners" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Partners
+      </Link>
+      <Link 
+        to="/about" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        About Us
+      </Link>
+      <Link 
+        to="/location" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Location
+      </Link>
+      <Link 
+        to="/login" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Login
+      </Link>
     </div>
   </nav>
 );
