@@ -1,21 +1,23 @@
-document.getElementById('menu-toggle').addEventListener('click', () => {
-  const menu = document.getElementById('dropdown-menu');
-  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-});
+// Check if dark mode was previously enabled
+document.addEventListener("DOMContentLoaded", function () {
+  const isDark = localStorage.getItem("darkMode") === "true";
+  const body = document.body;
+  const toggle = document.getElementById("dark-mode-toggle");
 
-document.getElementById('mode-toggle').addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
+  if (isDark) {
+    body.classList.add("dark");
+    if (toggle) toggle.checked = true;
+  }
 
-// Simulated authentication check
-document.addEventListener('DOMContentLoaded', () => {
-  const isLoggedIn = false; // change this to true if the user is logged in
-  const profileLink = document.getElementById('profile-link');
-  if (isLoggedIn) {
-    profileLink.textContent = 'Profile';
-    profileLink.href = 'profile.html';
-  } else {
-    profileLink.textContent = 'Sign In';
-    profileLink.href = 'signin.html';
+  if (toggle) {
+    toggle.addEventListener("change", function () {
+      if (this.checked) {
+        body.classList.add("dark");
+        localStorage.setItem("darkMode", "true");
+      } else {
+        body.classList.remove("dark");
+        localStorage.setItem("darkMode", "false");
+      }
+    });
   }
 });
