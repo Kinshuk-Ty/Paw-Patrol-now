@@ -1,4 +1,3 @@
-/* --- File: script.js --- */
 document.getElementById('menu-toggle').addEventListener('click', () => {
   const menu = document.getElementById('dropdown-menu');
   menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
