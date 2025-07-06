@@ -70,18 +70,22 @@ const Partners = () => (
   </div>
 );
 
-const Location = () => (
-  <div className="p-8">
-    <h2 className="text-2xl font-bold mb-4">Set Your Location</h2>
-    <div className="max-w-md mx-auto">
-      <input 
-        className="w-full mb-4 p-2 border rounded" 
-        placeholder="Enter your delivery address" 
-      />
-      <Button>Save Location</Button>
+const Location = () => {
+  return (
+    <div className="p-8">
+      <div className="max-w-md mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Set Your Location</h2>
+        <input 
+          className="w-full mb-4 p-2 border rounded" 
+          placeholder="Enter your delivery address" 
+        />
+        <Button onClick={() => alert('Location saved!')}>
+          Save Location
+        </Button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Login = () => (
   <div className="p-8 max-w-sm mx-auto">
