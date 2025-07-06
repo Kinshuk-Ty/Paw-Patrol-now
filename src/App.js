@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { auth } from './firebase';
-import Login from './Login';  // Add this with your other imports
+console.log("Firebase initialized:", auth);
 
 const Button = ({ children, ...props }) => (
   <button className="bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition" {...props}>
@@ -158,6 +158,15 @@ const Partners = () => (
   </div>
 );
 
+const Login = () => (
+  <div className="p-8 max-w-sm mx-auto">
+    <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
+    <input className="w-full mb-2 p-2 border rounded" placeholder="Username" />
+    <input className="w-full mb-4 p-2 border rounded" type="password" placeholder="Password" />
+    <Button className="w-full">Sign In</Button>
+  </div>
+);
+
 const Location = () => (
   <div className="p-8">
     <h2 className="text-2xl font-bold mb-4">Set Your Location</h2>
@@ -239,3 +248,4 @@ export default function App() {
     </Router>
   );  // ← Ensure this closing parenthesis exists
 }      // ← Ensure this closing brace exists
+        
