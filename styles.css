@@ -138,3 +138,27 @@ body.dark nav {
 }
 
 /* You can override more elements if needed */
+
+/* Hide the full menu by default */
+#full-menu {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Show full menu when toggled */
+#full-menu.show-menu {
+  display: flex;
+}
+
+/* Dark mode version */
+body.dark #full-menu {
+  background-color: #2a2a2a;
+}
