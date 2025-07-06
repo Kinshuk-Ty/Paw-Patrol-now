@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from './App'; // Reuse your Button component
+import Button from './App';
 
 const Login = () => {
   return (
@@ -18,11 +18,6 @@ const Login = () => {
       <Button className="w-full">
         Sign In
       </Button>
-      <p className="mt-4 text-center">
-        <Link to="/register" className="text-pink-500 hover:underline">
-          Create an account
-        </Link>
-      </p>
     </div>
   );
 };
