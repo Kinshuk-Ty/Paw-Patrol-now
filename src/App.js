@@ -157,15 +157,6 @@ const Partners = () => (
   </div>
 );
 
-const Login = () => (
-  <div className="p-8 max-w-sm mx-auto">
-    <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
-    <input className="w-full mb-2 p-2 border rounded" placeholder="Username" />
-    <input className="w-full mb-4 p-2 border rounded" type="password" placeholder="Password" />
-    <Button className="w-full">Sign In</Button>
-  </div>
-);
-
 const Location = () => (
   <div className="p-8">
     <h2 className="text-2xl font-bold mb-4">Set Your Location</h2>
