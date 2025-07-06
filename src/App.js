@@ -177,23 +177,6 @@ const Location = () => (
   </div>
 );
 
-const Navbar = () => (
-  <nav className="bg-white shadow p-4">
-    <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-      <h1 className="text-xl font-bold whitespace-nowrap">🐾 Paw Patrol</h1>
-      
-      <div className="flex flex-wrap justify-center gap-2">
-        <Link to="/" className="nav-button">Home</Link>
-        <Link to="/products" className="nav-button">Products</Link>
-        <Link to="/orders" className="nav-button">Orders</Link>
-        <Link to="/partners" className="nav-button">Partners</Link>
-        <Link to="/about" className="nav-button">About Us</Link>
-        <Link to="/location" className="nav-button">Location</Link>
-        <Link to="/login" className="nav-button">Login</Link>
-      </div>
-    </div>
-  </nav>
-);
 
 export default function App() {
   return (
@@ -215,7 +198,58 @@ export default function App() {
           {/* --- Other Pages --- */}
           <Route path="/partners" element={<Partners />} />
           <Route path="/location" element={<Location />} />
-          <Route path="/login" element={<Login />} />
+          <const Navbar = () => (
+  <nav className="bg-white shadow p-4">
+    <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+      <h1 className="text-xl font-bold whitespace-nowrap">🐾 Paw Patrol</h1>
+      
+      <div className="flex flex-wrap justify-center gap-2">
+        <Link 
+          to="/" 
+          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+        >
+          Home
+        </Link>
+        <Link 
+          to="/products" 
+          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+        >
+          Products
+        </Link>
+        <Link 
+          to="/orders" 
+          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+        >
+          Orders
+        </Link>
+        <Link 
+          to="/partners" 
+          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+        >
+          Partners
+        </Link>
+        <Link 
+          to="/about" 
+          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+        >
+          About Us
+        </Link>
+        <Link 
+          to="/location" 
+          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+        >
+          Location
+        </Link>
+        <Link 
+          to="/login" 
+          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+        >
+          Login
+        </Link>
+      </div>
+    </div>
+  </nav>
+);Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
