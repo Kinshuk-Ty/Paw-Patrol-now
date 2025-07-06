@@ -198,60 +198,54 @@ export default function App() {
           {/* --- Other Pages --- */}
           <Route path="/partners" element={<Partners />} />
           <Route path="/location" element={<Location />} />
-          <const Navbar = () => (
-  <nav className="bg-white shadow p-4">
-    <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-      <h1 className="text-xl font-bold whitespace-nowrap">🐾 Paw Patrol</h1>
-      
-      <div className="flex flex-wrap justify-center gap-2">
-        <Link 
-          to="/" 
-          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-        >
-          Home
-        </Link>
-        <Link 
-          to="/products" 
-          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-        >
-          Products
-        </Link>
-        <Link 
-          to="/orders" 
-          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-        >
-          Orders
-        </Link>
-        <Link 
-          to="/partners" 
-          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-        >
-          Partners
-        </Link>
-        <Link 
-          to="/about" 
-          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-        >
-          About Us
-        </Link>
-        <Link 
-          to="/location" 
-          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-        >
-          Location
-        </Link>
-        <Link 
-          to="/login" 
-          className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-        >
-          Login
-        </Link>
-      </div>
+
+const Navbar = () => (
+  <nav className="bg-white shadow p-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <h1 className="text-xl font-bold whitespace-nowrap">🐾 Paw Patrol</h1>
+    
+    <div className="flex flex-wrap justify-center gap-2">
+      <Link 
+        to="/" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+      >
+        Home
+      </Link>
+      <Link 
+        to="/products" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+      >
+        Products
+      </Link>
+      <Link 
+        to="/orders" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+      >
+        Orders
+      </Link>
+      <Link 
+        to="/partners" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+      >
+        Partners
+      </Link>
+      <Link 
+        to="/about" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+      >
+        About Us
+      </Link>
+      <Link 
+        to="/location" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+      >
+        Location
+      </Link>
+      <Link 
+        to="/login" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
+      >
+        Login
+      </Link>
     </div>
   </nav>
-);Route path="/login" element={<Login />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
+);
