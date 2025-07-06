@@ -111,6 +111,35 @@ const KinshukProfile = () => (
   </div>
 );
 
+const AyanProfile = () => (
+  <div className="p-8 max-w-2xl mx-auto">
+    <h2 className="text-3xl font-bold mb-4">Mohd Ayan</h2>
+    <img 
+      src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+      alt="Mohd Ayan" 
+      className="w-full h-64 object-cover rounded-xl mb-6"
+    />
+    <p className="mb-4">As co-founder of Paw Patrol, I bring business expertise and a love for pets...</p>
+    <Button className="mt-4">
+      <Link to="/about">Back to Team</Link>
+    </Button>
+  </div>
+);
+
+const PratikProfile = () => (
+  <div className="p-8 max-w-2xl mx-auto">
+    <h2 className="text-3xl font-bold mb-4">Pratik Raj</h2>
+    <img 
+      src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+      alt="Pratik Raj" 
+      className="w-full h-64 object-cover rounded-xl mb-6"
+    />
+    <p className="mb-4">As marketing head, I ensure Paw Patrol reaches every pet lover...</p>
+    <Button className="mt-4">
+      <Link to="/about">Back to Team</Link>
+    </Button>
+  </div>
+);
 // Create similar components for AyanProfile and PratikProfile
 const Partners = () => (
   <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4">
