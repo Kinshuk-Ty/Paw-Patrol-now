@@ -98,11 +98,15 @@ export default function App() {
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/products" element={<Products />} />
-  <Route path="/orders" element={<Orders />} />
-  <Route path="/about" element={<AboutUs />} />
-  <Route path="/partners" element={<Partners />} />
-  <Route path="/location" element={<Location />} /> {/* New route */}
-  <Route path="/login" element={<Login />} />
-</Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/location" element={<Location />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+  }
