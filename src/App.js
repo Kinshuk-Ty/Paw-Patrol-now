@@ -47,13 +47,6 @@ const Orders = () => (
   </div>
 );
 
-const AboutUs = () => (
-  <div className="p-8">
-    <h2 className="text-2xl font-bold mb-4">About Us</h2>
-    <p>Hello everyone. We, Kinshuk Tyagi and Mohd. Ayan, are the creators of this beautiful website for your beautiful pets!</p>
-  </div>
-);
-
 const ProfileCard = ({ name, role, bio, imageUrl, link }) => (
   <Card className="text-center rounded-2xl shadow-md overflow-hidden">
     <img 
