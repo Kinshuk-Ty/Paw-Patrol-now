@@ -107,7 +107,7 @@ const Navbar = () => (
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 border-[10px] border-gray-200">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
