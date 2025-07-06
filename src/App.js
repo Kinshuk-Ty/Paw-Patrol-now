@@ -68,12 +68,11 @@ const ProfileCard = ({ name, role, bio, imageUrl, link }) => (
 const AboutUs = () => (
   <div className="p-8">
     <h2 className="text-2xl font-bold mb-8 text-center">About Our Team</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {/* Profile cards remain the same */}
-      <ProfileCard 
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <ProfileCard
         name="Kinshuk Tyagi"
         role="Founder & Developer"
-        bio="Passionate about pets and technology..."
+        bio="Passionate about pets and technology. Created Paw Patrol to combine both loves and make pet care accessible to everyone."
         imageUrl="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
         link="/about/kinshuk"
       />
@@ -141,6 +140,7 @@ const PratikProfile = () => (
     </Button>
   </div>
 );
+
 // Create similar components for AyanProfile and PratikProfile
 const Partners = () => (
   <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -177,6 +177,55 @@ const Location = () => (
   </div>
 );
 
+const Navbar = () => (
+  <nav className="bg-white shadow p-4 flex justify-between items-center">
+    <h1 className="text-xl font-bold">🐾 Paw Patrol</h1>
+    <div className="space-x-2">
+      <Link 
+        to="/" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Home
+      </Link>
+      <Link 
+        to="/products" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Products
+      </Link>
+      <Link 
+        to="/orders" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Orders
+      </Link>
+      <Link 
+        to="/partners" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Partners
+      </Link>
+      <Link 
+        to="/about" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        About Us
+      </Link>
+      <Link 
+        to="/location" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Location
+      </Link>
+      <Link 
+        to="/login" 
+        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
+      >
+        Login
+      </Link>
+    </div>
+  </nav>
+);
 
 export default function App() {
   return (
@@ -198,54 +247,9 @@ export default function App() {
           {/* --- Other Pages --- */}
           <Route path="/partners" element={<Partners />} />
           <Route path="/location" element={<Location />} />
-
-const Navbar = () => (
-  <nav className="bg-white shadow p-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-    <h1 className="text-xl font-bold whitespace-nowrap">🐾 Paw Patrol</h1>
-    
-    <div className="flex flex-wrap justify-center gap-2">
-      <Link 
-        to="/" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-      >
-        Home
-      </Link>
-      <Link 
-        to="/products" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-      >
-        Products
-      </Link>
-      <Link 
-        to="/orders" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-      >
-        Orders
-      </Link>
-      <Link 
-        to="/partners" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-      >
-        Partners
-      </Link>
-      <Link 
-        to="/about" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-      >
-        About Us
-      </Link>
-      <Link 
-        to="/location" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-      >
-        Location
-      </Link>
-      <Link 
-        to="/login" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap"
-      >
-        Login
-      </Link>
-    </div>
-  </nav>
-);
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+          }
