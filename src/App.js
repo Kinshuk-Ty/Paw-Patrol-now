@@ -11,14 +11,16 @@ const NavButton = ({ to, label }) => (
 );
 
 const Navbar = () => (
-  <nav className="flex justify-between items-center p-4 bg-gray-100 shadow-md">
-    <h1 className="text-2xl font-bold text-gray-800">🐾 Paw Patrol</h1>
-    <div className="flex gap-3">
-      <NavButton to="/products" label="Products" />
-      <NavButton to="/orders" label="Orders" />
-      <NavButton to="/about" label="About Us" />
-      <NavButton to="/partners" label="Partners" />
-      <NavButton to="/login" label="Login" />
+  <nav className="bg-white shadow p-4 flex justify-between items-center">
+    <h1 className="text-xl font-bold">🐾 Paw Patrol</h1>
+    <div className="space-x-4">
+      <Link to="/">Home</Link>
+      <Link to="/products">Products</Link>
+      <Link to="/orders">Orders</Link>
+      <Link to="/partners">Partners</Link>
+      <Link to="/about">About Us</Link>
+      <Link to="/location">Location</Link> {/* ← ONLY ADD THIS LINE */}
+      <Link to="/login">Login</Link>
     </div>
   </nav>
 );
@@ -65,6 +67,19 @@ const Partners = () => (
   <div className="p-8">
     <h2 className="text-2xl font-bold mb-4">Our Partners</h2>
     <p>We work with local pet stores to deliver your products faster and cheaper.</p>
+  </div>
+);
+
+const Location = () => (
+  <div className="p-8">
+    <h2 className="text-2xl font-bold mb-4">Set Your Location</h2>
+    <div className="max-w-md mx-auto">
+      <input 
+        className="w-full mb-4 p-2 border rounded" 
+        placeholder="Enter your delivery address" 
+      />
+      <Button>Save Location</Button>
+    </div>
   </div>
 );
 
