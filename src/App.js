@@ -179,51 +179,82 @@ const Location = () => (
 );
 
 const Navbar = () => (
-  <nav className="bg-white shadow p-4 flex justify-between items-center">
-    <h1 className="text-xl font-bold">🐾 Paw Patrol</h1>
-    <div className="space-x-2">
-      <Link 
-        to="/" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
-      >
-        Home
-      </Link>
-      <Link 
-        to="/products" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
-      >
-        Products
-      </Link>
-      <Link 
-        to="/orders" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
-      >
-        Orders
-      </Link>
-      <Link 
-        to="/partners" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
-      >
-        Partners
-      </Link>
-      <Link 
-        to="/about" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
-      >
-        About Us
-      </Link>
-      <Link 
-        to="/location" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
-      >
-        Location
-      </Link>
-      <Link 
-        to="/login" 
-        className="text-black hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium transition"
-      >
-        Login
-      </Link>
+  <nav className="bg-white shadow p-4">
+    <div className="flex items-center">
+      <h1 className="text-xl font-bold whitespace-nowrap mr-6">🐾 Paw Patrol</h1>
+      
+      <div className="flex items-center space-x-1">
+        <NavLink 
+          to="/"
+          className={({ isActive }) => 
+            `px-3 py-1.5 rounded-full text-sm font-medium transition whitespace-nowrap ${
+              isActive ? 'bg-gray-100' : 'hover:bg-gray-100'
+            }`
+          }
+        >
+          Home
+        </NavLink>
+        <NavLink 
+          to="/products"
+          className={({ isActive }) => 
+            `px-3 py-1.5 rounded-full text-sm font-medium transition whitespace-nowrap ${
+              isActive ? 'bg-gray-100' : 'hover:bg-gray-100'
+            }`
+          }
+        >
+          Products
+        </NavLink>
+        <NavLink 
+          to="/orders"
+          className={({ isActive }) => 
+            `px-3 py-1.5 rounded-full text-sm font-medium transition whitespace-nowrap ${
+              isActive ? 'bg-gray-100' : 'hover:bg-gray-100'
+            }`
+          }
+        >
+          Orders
+        </NavLink>
+        <NavLink 
+          to="/partners"
+          className={({ isActive }) => 
+            `px-3 py-1.5 rounded-full text-sm font-medium transition whitespace-nowrap ${
+              isActive ? 'bg-gray-100' : 'hover:bg-gray-100'
+            }`
+          }
+        >
+          Partners
+        </NavLink>
+        <NavLink 
+          to="/about"
+          className={({ isActive }) => 
+            `px-3 py-1.5 rounded-full text-sm font-medium transition whitespace-nowrap ${
+              isActive ? 'bg-gray-100' : 'hover:bg-gray-100'
+            }`
+          }
+        >
+          About
+        </NavLink>
+        <NavLink 
+          to="/location"
+          className={({ isActive }) => 
+            `px-3 py-1.5 rounded-full text-sm font-medium transition whitespace-nowrap ${
+              isActive ? 'bg-gray-100' : 'hover:bg-gray-100'
+            }`
+          }
+        >
+          Location
+        </NavLink>
+        <NavLink 
+          to="/login"
+          className={({ isActive }) => 
+            `px-3 py-1.5 rounded-full text-sm font-medium transition whitespace-nowrap ${
+              isActive ? 'bg-gray-100' : 'hover:bg-gray-100'
+            }`
+          }
+        >
+          Login
+        </NavLink>
+      </div>
     </div>
   </nav>
 );
