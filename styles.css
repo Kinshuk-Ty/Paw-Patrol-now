@@ -1,0 +1,125 @@
+/* --- File: styles.css --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+  --bg: #fff;
+  --text: #000;
+  --btn-bg: #f72585;
+  --btn-text: #fff;
+}
+
+.dark-mode {
+  --bg: #121212;
+  --text: #f0f0f0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.brand {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.nav-btn {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.nav-btn:active {
+  box-shadow: 0 0 10px #f72585;
+}
+
+.hamburger {
+  background: none;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: var(--bg);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  padding: 1rem;
+  z-index: 100;
+}
+
+.menu a, .menu button {
+  margin: 0.3rem 0;
+  text-decoration: none;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+
+.home-hero {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background: rgba(0,0,0,0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.main-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.page-content {
+  padding: 2rem;
+}
