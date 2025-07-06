@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from './App'; // Reuse your Button component
-import Login from './Login';  // Add this with your other imports
 
 const Login = () => {
   return (
