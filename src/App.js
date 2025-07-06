@@ -68,11 +68,12 @@ const ProfileCard = ({ name, role, bio, imageUrl, link }) => (
 const AboutUs = () => (
   <div className="p-8">
     <h2 className="text-2xl font-bold mb-8 text-center">About Our Team</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <ProfileCard
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Profile cards remain the same */}
+      <ProfileCard 
         name="Kinshuk Tyagi"
         role="Founder & Developer"
-        bio="Passionate about pets and technology. Created Paw Patrol to combine both loves and make pet care accessible to everyone."
+        bio="Passionate about pets and technology..."
         imageUrl="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
         link="/about/kinshuk"
       />
