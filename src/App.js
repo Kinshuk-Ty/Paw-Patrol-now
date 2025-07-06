@@ -207,13 +207,21 @@ const Navbar = () => (
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50 border-[10px] border-gray-200">
+      <div className="min-h-screen bg-gray-50">
         <Navbar />
         <Routes>
+          {/* --- Main Content --- */}
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/orders" element={<Orders />} />
+          
+          {/* --- About Section --- */}
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/about/kinshuk" element={<KinshukProfile />} />
+          <Route path="/about/ayan" element={<AyanProfile />} />
+          <Route path="/about/pratik" element={<PratikProfile />} />
+          
+          {/* --- Other Pages --- */}
           <Route path="/partners" element={<Partners />} />
           <Route path="/location" element={<Location />} />
           <Route path="/login" element={<Login />} />
@@ -221,4 +229,4 @@ export default function App() {
       </div>
     </Router>
   );
-                                    }
+}
