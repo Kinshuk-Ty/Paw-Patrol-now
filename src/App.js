@@ -231,6 +231,16 @@ const Navbar = () => (
 );
 
 export default function App() {
+  // Inside your App component's return statement:
+<Router>
+  <div className="min-h-screen bg-gray-50">
+    {/* ▼ Add this button ▼ */}
+    <button 
+      onClick={() => alert("Firebase auth object: " + typeof auth)}
+      className="fixed top-4 left-4 bg-red-500 text-white p-2 rounded-lg z-50"
+    >
+      TEST
+    </button>
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
