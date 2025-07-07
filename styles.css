@@ -162,3 +162,25 @@ body.dark nav {
 body.dark #full-menu {
   background-color: #2a2a2a;
 }
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.site-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+body.light .site-name {
+  color: #000;
+}
