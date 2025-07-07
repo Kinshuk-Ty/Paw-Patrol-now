@@ -5,41 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paw Patrol</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="paw-logo.png" type="image/png" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo-link">
-        <img src="paw-logo.png" alt="Paw Patrol Logo" class="logo-img" />
-        <span class="site-name">Paw Patrol</span>
-      </a>
-    </div>
-    <div class="nav-center">
-      <a href="products.html" class="nav-btn">Products</a>
-      <a href="location.html" class="nav-btn">Location</a>
-      <a href="cart.html" class="nav-btn">Cart</a>
-    </div>
-    <div class="nav-right">
-      <div id="hamburger">☰</div>
-    </div>
-  </nav>  <div id="full-menu">
-    <a href="profile.html" id="profile-link">Sign In</a>
-    <a href="products.html">Products</a>
-    <a href="location.html">Location</a>
-    <a href="cart.html">Cart</a>
-    <a href="about.html">About Us</a>
-    <a href="partners.html">Partners</a>
-    <label>
-      Dark Mode
-      <input type="checkbox" id="dark-mode-toggle" />
-    </label>
-  </div>  <main class="home-hero">
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="index.html" class="brand">Paw Patrol</a>
+      </div>
+      <div class="nav-center">
+        <a href="products.html" class="nav-btn">Products</a>
+        <a href="location.html" class="nav-btn">Location</a>
+        <a href="cart.html" class="nav-btn">Cart</a>
+      </div>
+      <div class="nav-right">
+        <button id="menu-toggle" class="hamburger">≡</button>
+        <div class="menu" id="dropdown-menu">
+          <a href="profile.html" id="profile-link">Sign In</a>
+          <a href="products.html">Products</a>
+          <a href="location.html">Location</a>
+          <a href="cart.html">Cart</a>
+          <a href="about.html">About Us</a>
+          <a href="partners.html">Partners</a>
+          <button id="mode-toggle">Toggle Dark/Light</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="home-hero">
     <img src="pets.jpg" alt="Pets playing" class="hero-img" />
     <div class="hero-text">
       <h1>Welcome to Paw Patrol</h1>
       <p>Bringing joy to your Furry Friends</p>
       <a href="products.html" class="main-btn">Shop Now</a>
     </div>
-  </main>  <script src="script.js"></script></body>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
